@@ -1,8 +1,8 @@
 Package.describe({
   name: 'yogiben:autoform-tags',
-  summary: ' /* Fill me in! */ ',
-  version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  summary: 'Select tags with autoForm',
+  version: '0.0.1',
+  git: 'https://github.com/yogiben/meteor-autoform-tags'
 });
 
 Package.onUse(function(api) {
