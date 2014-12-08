@@ -1,0 +1,7 @@
+<template name="autoformTags">
+	<div data-schema-key="{{schemaKey}}">
+		{{#each tags}}
+			<span class="label {{#if selected}}label-primary js-selected{{else}}label-default{{/if}}" data-tag="{{value}}">{{label}}</span>
+		{{/each}}
+	</div>
+</template>
