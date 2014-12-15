@@ -1,5 +1,5 @@
-AutoForm.addInputType 'tags',
-	template: 'autoformTags'
+AutoForm.addInputType 'tags-toggle',
+	template: 'autoformTagsToggle'
 	valueOut: ->
 		tags = @children('.js-selected').map ->
 			$(@).data 'tag'
@@ -26,7 +26,7 @@ AutoForm.addInputType 'tags',
 			ctx._selectedTags.indexOf(tag) > -1
 		ctx
 
-Template.autoformTags.helpers
+Template.autoformTagsToggle.helpers
 	schemaKey: ->
 		@atts['data-schema-key']
 	tags: ->
@@ -36,7 +36,7 @@ Template.autoformTags.helpers
 			tag.selected = @isTagSelected tag.value
 			tag
 
-Template.autoformTags.events
+Template.autoformTagsToggle.events
 	'click .label': (e, t) ->
 		selected = t.data.isTagSelected @value
 		if selected

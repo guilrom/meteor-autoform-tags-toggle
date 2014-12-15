@@ -4,7 +4,7 @@ Autoform tags
 Select tags with autoForm.
 
 ###Setup###
-1) Install `meteor add yogiben:autoform-tags`
+1) Install `meteor add yogiben:autoform-tags-toggle`
 
 2) Define your schema and set the `autoform` property like in the example below
 ```
@@ -21,7 +21,7 @@ Schemas.Entries = new SimpleSchema
 		type: String
 		autoform:
 			afFieldInput:
-				type: 'tags'
+				type: 'tags-toggle'
 				tags: [
 					'music',
 					'book',

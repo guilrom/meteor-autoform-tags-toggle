@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'yogiben:autoform-tags',
+  name: 'yogiben:autoform-tags-toggle',
   summary: 'Select tags with autoForm',
   version: '0.0.1',
-  git: 'https://github.com/yogiben/meteor-autoform-tags'
+  git: 'https://github.com/yogiben/meteor-autoform-tags-toggle'
 });
 
 Package.onUse(function(api) {
@@ -16,8 +16,8 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles([
-  	'lib/client/autoform-tags.html',
-  	'lib/client/autoform-tags.coffee'
+  	'lib/client/autoform-tags-toggle.html',
+  	'lib/client/autoform-tags-toggle.coffee'
   ]);
 });
 
