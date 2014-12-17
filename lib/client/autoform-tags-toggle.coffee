@@ -5,25 +5,15 @@ AutoForm.addInputType 'tags-toggle',
 			$(@).data 'tag'
 		tags.get().join ','
 	contextAdjust: (ctx) ->
-		ctx.selectedTags = new Tracker.Dependency
-		ctx._selectedTags = []
-		if typeof ctx.value == 'string'
-			ctx._selectedTags = ctx.value.split ','
+		ctx.selectedTags = new ReactiveVar []
+		ctx.selectedTags.set ctx.value.split(',') if typeof ctx.value == 'string'
 		
-		ctx.getSelectedTags = =>
-			ctx.selectedTags.depend()
-			ctx._selectedTags
 		ctx.selectTag = (tag) =>
-			ctx._selectedTags.push tag
-			ctx.selectedTags.changed()
+			ctx.selectedTags.set _.union(ctx.selectedTags.get(), [tag])
 		ctx.removeTag = (tag) =>
-			pos = ctx._selectedTags.indexOf tag
-			if pos > -1
-				ctx._selectedTags.splice pos, 1
-			ctx.selectedTags.changed()
+			ctx.selectedTags.set _.without(ctx.selectedTags.get(), tag)
 		ctx.isTagSelected = (tag) =>
-			ctx.selectedTags.depend()
-			ctx._selectedTags.indexOf(tag) > -1
+			_.contains ctx.selectedTags.get(), tag
 		ctx
 
 Template.autoformTagsToggle.helpers

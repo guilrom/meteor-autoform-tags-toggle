@@ -10,7 +10,7 @@ Package.onUse(function(api) {
 
   api.use([
   	'templating',
-  	'tracker',
+  	'reactive-var',
   	'coffeescript',
   	'aldeed:autoform@4.0.7'
   ], 'client');
