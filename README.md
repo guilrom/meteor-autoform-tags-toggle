@@ -1,4 +1,4 @@
-Autoform Tags
+Autoform Tags Toggle
 ============
 
 User can togggle predefined tags.
