@@ -1,7 +1,7 @@
-Autoform tags
+Autoform Tags
 ============
 
-Select tags with autoForm.
+User can togggle predefined tags.
 
 ###Setup###
 1) Install `meteor add yogiben:autoform-tags-toggle`
