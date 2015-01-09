@@ -21,9 +21,3 @@ Package.onUse(function(api) {
   	'lib/client/autoform-tags-toggle.css'
   ]);
 });
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('yogiben:autoform-tags');
-  api.addFiles('yogiben:autoform-tags-tests.js');
-});
