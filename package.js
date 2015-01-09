@@ -17,7 +17,8 @@ Package.onUse(function(api) {
 
   api.addFiles([
   	'lib/client/autoform-tags-toggle.html',
-  	'lib/client/autoform-tags-toggle.coffee'
+    'lib/client/autoform-tags-toggle.coffee',
+  	'lib/client/autoform-tags-toggle.css'
   ]);
 });
 

@@ -3,6 +3,8 @@ Autoform Tags
 
 User can togggle predefined tags.
 
+![alt tag](https://raw.githubusercontent.com/yogiben/meteor-autoform-tags-toggle/master/readme/screenshot1.png)
+
 ###Setup###
 1) Install `meteor add yogiben:autoform-tags-toggle`
 
