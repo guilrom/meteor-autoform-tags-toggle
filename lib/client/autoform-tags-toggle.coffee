@@ -3,11 +3,14 @@ AutoForm.addInputType 'tags-toggle',
 	valueOut: ->
 		tags = @children('.js-selected').map ->
 			$(@).data 'tag'
-		tags.get().join ','
+		tags.get()
+	valueConverters:
+		string: (tags) ->
+			tags.join ','
 	contextAdjust: (ctx) ->
 		ctx.selectedTags = new ReactiveVar []
 		ctx.selectedTags.set ctx.value.split(',') if typeof ctx.value == 'string'
-		
+
 		ctx.selectTag = (tag) =>
 			ctx.selectedTags.set _.union(ctx.selectedTags.get(), [tag])
 		ctx.removeTag = (tag) =>

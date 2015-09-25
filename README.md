@@ -9,7 +9,7 @@ User can togggle predefined tags.
 1) Install `meteor add yogiben:autoform-tags-toggle`
 
 2) Define your schema and set the `autoform` property like in the example below
-```
+```coffeescript
 Schemas = {}
 
 @Entries = new Meteor.Collection('entries');
@@ -18,12 +18,12 @@ Schemas.Entries = new SimpleSchema
 	title:
 		type:String
 		max: 60
-		
+
 	tags:
-		type: String
+		type: [String]
 		autoform:
+			type: 'tags-toggle'
 			afFieldInput:
-				type: 'tags-toggle'
 				tags: [
 					'music',
 					'book',
@@ -51,4 +51,23 @@ or
 {{/autoForm}}
 ```
 
-Tags will be comma separated string.
+Alternatively if you want to save tags as comma separated string, use this schema:
+
+```coffeescript
+Schemas.Entries = new SimpleSchema
+	title:
+		type:String
+		max: 60
+
+	tags:
+		type: String
+		autoform:
+			afFieldInput:
+				type: 'tags-toggle'
+				tags: [
+					'music',
+					'book',
+					# alternatively you can set different label than tag value:
+					{ label: 'Movies', value: 'movies' }
+				]
+```
