@@ -12,7 +12,7 @@ Package.onUse(function(api) {
   	'templating',
   	'reactive-var',
   	'coffeescript',
-  	'aldeed:autoform@4.0.7'
+  	'aldeed:autoform@5.5.1'
   ], 'client');
 
   api.addFiles([
