@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'yogiben:autoform-tags-toggle',
+  name: 'guilrom:autoform-tags-toggle',
   summary: 'Select tags with autoForm',
   version: '0.0.1',
-  git: 'https://github.com/yogiben/meteor-autoform-tags-toggle'
+  git: 'https://github.com/guilrom/meteor-autoform-tags-toggle'
 });
 
 Package.onUse(function(api) {
