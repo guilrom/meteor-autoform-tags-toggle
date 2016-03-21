@@ -13,7 +13,7 @@ Package.onUse(function(api) {
   	'reactive-var',
   	'coffeescript',
   	'aldeed:autoform@5.5.1'
-  ], ['client', 'server']);
+  ], 'client');
 
   api.addFiles([
   	'lib/client/autoform-tags-toggle.html',
