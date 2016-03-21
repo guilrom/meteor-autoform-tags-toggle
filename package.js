@@ -18,9 +18,7 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles([
-    'lib/client/autoform-tags-toggle.coffee'
-  ], ['client', 'server']);
-  api.addFiles([
+    'lib/client/autoform-tags-toggle.coffee',
   	'lib/client/autoform-tags-toggle.html',
   	'lib/client/autoform-tags-toggle.css'
   ], 'client');  
