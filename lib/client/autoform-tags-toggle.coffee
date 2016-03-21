@@ -10,6 +10,7 @@ AutoForm.addInputType 'tags-toggle',
 	contextAdjust: (ctx) ->
 		ctx.selectedTags = new ReactiveVar []
 		ctx.selectedTags.set ctx.value.split(',') if typeof ctx.value == 'string'
+		ctx.selectedTags.set ctx.value if typeof ctx.value == 'object'
 
 		ctx.selectTag = (tag) =>
 			ctx.selectedTags.set _.union(ctx.selectedTags.get(), [tag])
