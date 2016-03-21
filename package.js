@@ -9,11 +9,13 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   api.use([
-  	'templating',
   	'reactive-var',
-  	'coffeescript',
-  	'aldeed:autoform@5.5.1'
+  	'coffeescript'
   ], ['client', 'server']);
+  api.use([
+  	'templating',
+  	'aldeed:autoform@5.5.1'
+  ], 'client');
 
   api.addFiles([
     'lib/client/autoform-tags-toggle.coffee'
