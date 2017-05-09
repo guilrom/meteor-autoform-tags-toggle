@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'guilrom:autoform-tags-toggle',
+  name: 'guilrom:autoform-tags-toggle2',
   summary: 'Select tags with autoForm',
   version: '0.0.1',
   git: 'https://github.com/guilrom/meteor-autoform-tags-toggle'
